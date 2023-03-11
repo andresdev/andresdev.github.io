@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    
+    <script src="sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="sweetalert.css">
+    
+    <title> Diagnóstico MujerON </title>
+</head>
+
+<body style="background-color:#525252;"> 
+        
+    <font color="White" face="Verdana">
+    
+    <!--titulo-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="text-align: center;" >  </h1>
+            </div>
+        </div>
+    </div>
+
+    <!--Preguntas-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form> 
+                    <p><strong>1. Si me invitan a salir: </strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta1" id="p11"> Inmediatamente acepto, incluso voy al salón para súper arreglarme y hasta me compro algo para estrenar. “¡Que emoción!” </li>
+                        
+                        <li><input type="radio" name="pregunta1" id="p12"> Usualmente No acepto, pues los hombres me hacen perder mí tiempo. “Que flojera me da”</li>
+                        
+                        <li><input type="radio" name="pregunta1" id="p13"> Acepto siempre y cuando cumpla con mis requisitos y este a mi altura. “ Indispensable que nos veamos bien”</li>
+                        
+                        <li><input type="radio" name="pregunta1" id="p14"> Acepto siempre y cuando sienta una verdadera conexión con él. “Su energía me dice mucho”</li>
+                       
+                    </ol>
+                    <p><strong>2. Si en la primera cita me hace pagar parte de la cuenta: </strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta2" id="p21"> Sin problema lo doy, para que vea que soy un tipo de mujer que sí ayuda siempre. “Es bonito compartir”</li>
+                        
+                        <li><input type="radio" name="pregunta2" id="p22"> Huyo de él, pues se nota que no tiene interés ni recurso. “No quiero ser su banco”</li>
+                        
+                        <li><input type="radio" name="pregunta2" id="p23"> No me da confianza, prefiero a alguien que no tenga este tipo de preocupaciones económicas. “No quiero esto en mi vida”</li>
+                        
+                        <li><input type="radio" name="pregunta2" id="p24"> Lo hago pensando que no es su obligación pagar todo. “Solo observaré que no sea un patrón conductual de carencia”</li>
+                   
+                    </ol>
+                    <p><strong>3. En la primera cita me pide tener relaciones sexuales: </strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta3" id="p31"> Pienso que seguramente le guste mucho y acepto aunque me sienta un poco incomoda. “No vaya a ser que no me vuelva a buscar”</li>
+                        
+                        <li><input type="radio" name="pregunta3" id="p32"> Si me gusta mucho acepto, pues aprovecho la ocasión también para disfrutar. “¿Por qué no?”</li>
+                        
+                         <li><input type="radio" name="pregunta3" id="p33"> Es un rotundo no. Tiene que hacer méritos para alguien que vale la pena como yo. “No soy fácil”</li>
+                        
+                        <li><input type="radio" name="pregunta3" id="p34"> Le doy las gracias y prefiero conocerlo más antes de compartir mi cuerpo y energía con él. “Es un acto sublime donde entrego mi ser”</li>
+                     
+                    </ol>
+                    <p><strong>4. Después de la primera cita, si no me llama pronto: </strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta4" id="p41"> Dudo de mí, siento que hice algo que no le agrado y pienso que debí haber sido más linda. “Ay debí regalarle algo para que me recordara”</li>
+                        
+                        <li><input type="radio" name="pregunta4" id="p42"> Que ni se le ocurra buscarme porque no contestaré. “Esa ya me la se”</li>
+                        
+                         <li><input type="radio" name="pregunta4" id="p43"> Analizo si realmente vale la pena ese hombre y si podrá cumplir con mis requisitos. “Prefiero soltar para no engancharme”</li>
+                        
+                        <li><input type="radio" name="pregunta4" id="p44"> Agradezco el encuentro al universo y sigo con mi vida disfrutando y aprendiendo de la vida. “Es necesario aprender de todo”</li>
+                      
+                    </ol>
+                    <p><strong>5. Si en la primera cita, resulta que soy el amor de su vida y casi me pide matrimonio: </strong></p>
+                    <ol type="A">
+                        <li><input type="radio" name="pregunta5" id="p51"> Siento que por fin encontré el príncipe azul. “Es sin duda la mitad que me faltaba”</li>
+                        
+                        <li><input type="radio" name="pregunta5" id="p52"> Le doy el avión y salgo corriendo, pues “A mí nadie me engaña”</li>
+                        
+                         <li><input type="radio" name="pregunta5" id="p53"> Nada nuevo, generalmente me pasa y controlo la situación. ”Siempre ven que no hay mujer como yo”</li>
+                        
+                        <li><input type="radio" name="pregunta5" id="p54"> Lo escucho con atención y le hago ver que es importante conocernos a fondo en todas las áreas de nuestra vida. “Promuevo un amor consciente”</li>
+                    </ol>
+                    
+                   
+                    
+                    
+                    
+                    <hr />                
+                    <input type="button"  value="RESULTADO" class="btn btn-primary"  onclick="EventoAlert()"/>
+    <script>
+        
+
+        function EventoAlert(){
+            
+          if(resultado()>resultadoB() && resultado()>resultadoC() && resultado()>resultadoD()){
+              swal("Princesa Soñadora","Conectar con tus propias virtudes y valía será fundamental.","success"); 
+       }  else if(resultadoB()>resultado() && resultadoB()>resultadoC() && resultadoB()>resultadoD()){
+           swal("Poderosa Segura","Trabajemos para evidenciar qué o quién te hirió.","success"); 
+       }  else if(resultadoC()>resultado() && resultadoC()>resultadoB() && resultadoC()>resultadoD()){
+        swal("Super Carismatica","El reconocimiento y la validación, son elementos que agotan.","success");  
+       }  else if(resultadoD()>resultado() && resultadoD()>resultadoC() && resultadoD()>resultadoB()){
+       swal("Consciente Despierta","El camino del autoconocimiento nunca termina.","success");  
+           
+       } else if(resultado() == resultadoB()){
+                     swal("Princesa Soñadora con Poderosa Segura","Es muy fácil confundir entre lo que deseas y lo que realmente necesitas. ¡Inicia la transformación!","success"); 
+                                              
+        } else if(resultado() == resultadoC()){
+                      swal("Princesa Soñadora con Súper Carismatica","Importante analizar y profundizar en el aspecto real de tu personalidad. ¡Trabajemos!","success"); 
+        } else if (resultado() == resultadoD()){
+                      swal("Princesa Soñadora con Consciente Despierta","Es muy fácil confundir entre lo que deseas y lo que realmente necesitas. ¡Inicia la transformación!","success"); 
+        }  else if (resultadoB() == resultadoC()){
+                      swal("Poderosa Segura con Súper Carismatica","Suelta el control y permítete ser la verdadera expresión genuina de tu Ser. ¡Hagamos el cambio!","success"); 
+        } else if (resultadoB() == resultadoD()){
+                      swal("Consciente Despierta con Poderosa Segura","La consciencia se vive y se siente, jamás depende de los demás. ¡Ratifiquemos tu autoconocimiento!","success"); 
+        } else if (resultadoC() == resultadoD()){
+                      swal("Super Carismatica con Consciente Despierta","Suelta el control y permítete ser la verdadera expresión genuina de tu Ser. ¡Hagamos el cambio!","success");    
+        }       
+            
+        }
+        
+        
+      
+        
+        
+        
+    </script>
+                 <hr />
+                    
+                </form>
+                
+     
+                
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!--Llamada al script de respuestas-->
+    <script src="respuestas.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
+        integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
+        </font>
+</body>
+
+</html>
