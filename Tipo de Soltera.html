@@ -108,7 +108,9 @@
        }  else if(resultadoD()>resultado() && resultadoD()>resultadoC() && resultadoD()>resultadoB()){
        swal("Consciente Despierta","El camino del autoconocimiento nunca termina.","success");  
            
-       } else if(resultado() == resultadoB()){
+       } else if (resultadoC() == 0 && resultado()== 0 && resultadoB()== 0 && resultadoD()== 0){
+                      swal("No hay campos a evaluar.","Debes responder el cuestionario.","error");    
+        } else if(resultado() == resultadoB()){
                      swal("Princesa Soñadora con Poderosa Segura","Es muy fácil confundir entre lo que deseas y lo que realmente necesitas. ¡Inicia la transformación!","success"); 
                                               
         } else if(resultado() == resultadoC()){
