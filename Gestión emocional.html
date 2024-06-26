@@ -116,7 +116,7 @@
 		 </ol>
                     <p><strong>11. Cuando siento que alguien me agredio dificilmente lo disculpo </strong></p>
                     <ol type="A">
-                        <li><input type="radio" name="pregunta5" id="111"> Si </li>
+                        <li><input type="radio" name="pregunta5" id="p111"> Si </li>
                         
                         <li><input type="radio" name="pregunta5" id="p112"> No </li>
 
@@ -138,13 +138,18 @@
         function EventoAlert(){
             
           if(resultado()>resultadoB() && resultado()>resultadoC() && resultado()>resultadoD()){
-              swal("Princesa Soñadora","Conectar con tus propias virtudes y valía será fundamental.","success"); 
+              swal("Control total de tus emociones","Conectar con tus propias virtudes y valía será fundamental.","success"); 
+		  
        }  else if(resultadoB()>resultado() && resultadoB()>resultadoC() && resultadoB()>resultadoD()){
            swal("Poderosa Segura","Trabajemos para evidenciar qué o quién te hirió.","success"); 
+		  
        }  else if(resultadoC()>resultado() && resultadoC()>resultadoB() && resultadoC()>resultadoD()){
         swal("Super Carismatica","El reconocimiento y la validación, son elementos que agotan.","success");  
+		  
        }  else if(resultadoD()>resultado() && resultadoD()>resultadoC() && resultadoD()>resultadoB()){
        swal("Consciente Despierta","El camino del autoconocimiento nunca termina.","success");  
+
+		  
            
        } else if (resultadoC() == 0 && resultado()== 0 && resultadoB()== 0 && resultadoD()== 0){
                       swal("No hay campos a evaluar.","Debes responder el cuestionario.","error");    
